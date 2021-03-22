@@ -25,7 +25,8 @@
     "@nrwl/angular:library": {
       "style": "scss",
       "linter": "eslint",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "strict": true
     },
     "@nrwl/angular:component": {
       "style": "scss"
@@ -139,6 +140,86 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/lab-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "ui-styles": {
+      "root": "libs/ui/styles",
+      "sourceRoot": "libs/ui/styles/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/ui/styles/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui/styles"],
+          "options": {
+            "jestConfig": "libs/ui/styles/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "options": {
+            "outputPath": "dist/libs/ui/styles",
+            "tsConfig": "libs/ui/styles/tsconfig.lib.json",
+            "packageJson": "libs/ui/styles/package.json",
+            "main": "libs/ui/styles/src/index.ts",
+            "assets": [
+              "libs/ui/styles/*.md",
+              "libs/ui/styles/LICENSE",
+              "libs/ui/styles/**/*.css"
+            ]
+          }
+        },
+        "sass": {
+          "builder": "@nrwl/workspace:run-commands",
+          "outputs": ["./dist"],
+          "options": {
+            "command": "sass src/lib/styles.scss src/dist/ui-styles.css",
+            "cwd": "libs/ui/styles"
+          }
+        }
+      }
+    },
+    "ui-elements": {
+      "projectType": "library",
+      "root": "libs/ui/elements",
+      "sourceRoot": "libs/ui/elements/src",
+      "prefix": "voxel",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ui/elements/tsconfig.lib.json",
+            "project": "libs/ui/elements/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ui/elements/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui/elements/src/**/*.ts",
+              "libs/ui/elements/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui/elements"],
+          "options": {
+            "jestConfig": "libs/ui/elements/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
