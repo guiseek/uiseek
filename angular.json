@@ -37,7 +37,7 @@
       "projectType": "application",
       "root": "apps/lab",
       "sourceRoot": "apps/lab/src",
-      "prefix": "voxel",
+      "prefix": "uiseek",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -122,7 +122,7 @@
       "projectType": "library",
       "root": "libs/ui/elements",
       "sourceRoot": "libs/ui/elements/src",
-      "prefix": "voxel",
+      "prefix": "uiseek",
       "architect": {
         "build": {
           "builder": "@nrwl/angular:package",

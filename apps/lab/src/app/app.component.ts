@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'voxel-root',
+  selector: 'uiseek-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
