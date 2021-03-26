@@ -48,6 +48,11 @@
             "polyfills": "apps/lab/src/polyfills.ts",
             "tsConfig": "apps/lab/tsconfig.app.json",
             "aot": true,
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/styles/src/lib"
+              ]
+            },
             "assets": ["apps/lab/src/favicon.ico", "apps/lab/src/assets"],
             "styles": ["apps/lab/src/styles.scss"],
             "scripts": []
