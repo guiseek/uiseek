@@ -1,0 +1,63 @@
+{
+  "uiseek": {
+    "primary": {
+      "rgb": {
+        "category": "fill",
+        "comment": "primary color",
+        "value": "rgba(33, 89, 243, 1)",
+        "type": "color"
+      }
+    },
+    "on": {
+      "surface": {
+        "category": "fill",
+        "comment": null,
+        "value": "rgba(255, 255, 255, 1)",
+        "type": "color"
+      },
+      "primary": {
+        "rgb": {
+          "category": "fill",
+          "comment": null,
+          "value": "rgba(255, 255, 255, 1)",
+          "type": "color"
+        }
+      }
+    },
+    "button": {
+      "disabled": {
+        "color": {
+          "category": "fill",
+          "comment": null,
+          "value": "rgba(0, 0, 0, 0.38)",
+          "type": "color"
+        },
+        "background": {
+          "category": "fill",
+          "comment": null,
+          "value": "rgba(0, 0, 0, 0.12)",
+          "type": "color"
+        }
+      },
+      "text": {
+        "background": { "category": "fill", "comment": null, "type": "color" }
+      },
+      "outlined": {
+        "border": {
+          "category": "fill",
+          "comment": null,
+          "value": "rgba(0, 0, 0, 0.24)",
+          "type": "color"
+        }
+      }
+    },
+    "surface": {
+      "rgb": {
+        "category": "fill",
+        "comment": null,
+        "value": "rgba(0, 0, 0, 1)",
+        "type": "color"
+      }
+    }
+  }
+}

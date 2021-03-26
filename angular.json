@@ -49,9 +49,7 @@
             "tsConfig": "apps/lab/tsconfig.app.json",
             "aot": true,
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/styles/src/lib"
-              ]
+              "includePaths": ["libs/styles/src/lib","desgin/tokens/build"]
             },
             "assets": ["apps/lab/src/favicon.ico", "apps/lab/src/assets"],
             "styles": ["apps/lab/src/styles.scss"],
@@ -162,6 +160,22 @@
           "options": {
             "command": "sass src/lib/styles.scss src/dist/styles.css",
             "cwd": "libs/styles"
+          }
+        },
+        "tokens": {
+          "builder": "@nrwl/workspace:run-commands",
+          "outputs": [],
+          "options": {
+            "command": "npx style-dictionary clean && npx style-dictionary build",
+            "cwd": "design/tokens"
+          },
+          "configurations": {
+            "clean": {
+              "command": "npx style-dictionary clean"
+            },
+            "build": {
+              "command": "npx style-dictionary build"
+            }
           }
         }
       }

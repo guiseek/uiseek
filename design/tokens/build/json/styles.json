@@ -1,0 +1,9 @@
+{
+  "UiseekPrimaryRgb": "rgba(33, 89, 243, 1)",
+  "UiseekOnSurface": "rgba(255, 255, 255, 1)",
+  "UiseekOnPrimaryRgb": "rgba(255, 255, 255, 1)",
+  "UiseekButtonDisabledColor": "rgba(0, 0, 0, 0.38)",
+  "UiseekButtonDisabledBackground": "rgba(0, 0, 0, 0.12)",
+  "UiseekButtonOutlinedBorder": "rgba(0, 0, 0, 0.24)",
+  "UiseekSurfaceRgb": "rgba(0, 0, 0, 1)"
+}
