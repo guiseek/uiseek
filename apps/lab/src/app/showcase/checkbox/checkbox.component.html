@@ -1,5 +1,52 @@
 <form [formGroup]="form" class="grid">
   <a>checkbox</a>
+  <!-- <div>
+    <div
+      role="checkbox"
+      class="group_checkbox"
+      aria-checked="mixed"
+      aria-controls="cond1 cond2 cond3 cond4"
+      tabindex="0"
+    >
+      All condiments
+    </div>
+    <label uiseek checkbox>
+      <input
+        type="checkbox"
+        role="checkbox"
+        aria-checked="mixed"
+        aria-controls="cond1 cond2 cond3 cond4"
+        tabindex="0"
+      />
+      <span>  All condiments </span>
+    </label>
+    <ul class="checkboxes">
+      <li>
+        <label uiseek checkbox>
+          <input type="checkbox" id="cond1" />
+          <span> Lettuce </span>
+        </label>
+      </li>
+      <li>
+        <label uiseek checkbox>
+          <input type="checkbox" id="cond2" checked />
+          <span> Tomato </span>
+        </label>
+      </li>
+      <li>
+        <label uiseek checkbox>
+          <input type="checkbox" id="cond3" />
+          <span> Mustard </span>
+        </label>
+      </li>
+      <li>
+        <label uiseek checkbox>
+          <input type="checkbox" id="cond4" />
+          <span> Sprouts </span>
+        </label>
+      </li>
+    </ul>
+  </div>-->
   <div formGroupName="enabled" class="checkboxes">
     <label uiseek checkbox>
       <input type="checkbox" formControlName="unchecked" />
