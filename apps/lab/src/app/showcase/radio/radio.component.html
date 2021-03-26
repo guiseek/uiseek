@@ -1,21 +1,33 @@
-<a>radio buttons</a>
-<div class="radios">
-  <label class="uiseek-radio">
-    <input type="radio" name="group-enabled" />
-    <span>unchecked</span>
-  </label>
-  <label class="uiseek-radio">
-    <input type="radio" name="group-enabled" checked />
-    <span>checked</span>
-  </label>
-</div>
-<div class="radios">
-  <label class="uiseek-radio">
-    <input type="radio" name="group-disabled" disabled />
-    <span>unchecked</span>
-  </label>
-  <label class="uiseek-radio">
-    <input type="radio" name="group-disabled" checked disabled />
-    <span>checked</span>
-  </label>
-</div>
+<form [formGroup]="form" class="grid">
+  <a>radio buttons</a>
+  <div class="radios">
+    <label uiseek radio>
+      <input type="radio" name="enabled" formControlName="enabled" />
+      <span>unchecked</span>
+    </label>
+    <label uiseek radio>
+      <input
+        type="radio"
+        name="enabled"
+        formControlName="enabled"
+        value="true"
+      />
+      <span>checked</span>
+    </label>
+  </div>
+  <div class="radios">
+    <label uiseek radio>
+      <input type="radio" name="disabled" formControlName="disabled" />
+      <span>unchecked</span>
+    </label>
+    <label uiseek radio>
+      <input
+        type="radio"
+        name="disabled"
+        formControlName="disabled"
+        value="true"
+      />
+      <span>checked</span>
+    </label>
+  </div>
+</form>

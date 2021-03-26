@@ -1,13 +1,15 @@
-<a>slider</a>
-<div>
-  <label class="uiseek-slider">
-    <input type="range" min="0" max="100" />
-    <span>slider</span>
-  </label>
-</div>
-<div>
-  <label class="uiseek-slider">
-    <input type="range" min="0" max="100" disabled />
-    <span>slider</span>
-  </label>
-</div>
+<form [formGroup]="form" class="grid">
+  <a>slider</a>
+  <div>
+    <label class="uiseek-slider">
+      <input type="range" formControlName="enabled" min="0" max="100" />
+      <span>slider</span>
+    </label>
+  </div>
+  <div>
+    <label class="uiseek-slider">
+      <input type="range" formControlName="disabled" min="0" max="100" />
+      <span>slider</span>
+    </label>
+  </div>
+</form>

@@ -1,29 +1,39 @@
-<a>checkbox</a>
-<div class="checkboxes">
-  <label class="uiseek-checkbox">
-    <input type="checkbox" />
-    <span>unchecked</span>
-  </label>
-  <label class="uiseek-checkbox">
-    <input type="checkbox" checked />
-    <span>checked</span>
-  </label>
-  <label class="uiseek-checkbox">
-    <input type="checkbox" />
-    <span>indeterminate</span>
-  </label>
-</div>
-<div class="checkboxes">
-  <label class="uiseek-checkbox">
-    <input type="checkbox" disabled />
-    <span>unchecked</span>
-  </label>
-  <label class="uiseek-checkbox">
-    <input type="checkbox" checked disabled />
-    <span>checked</span>
-  </label>
-  <label class="uiseek-checkbox">
-    <input type="checkbox" disabled />
-    <span>indeterminate</span>
-  </label>
-</div>
+<form [formGroup]="form" class="grid">
+  <a>checkbox</a>
+  <div formGroupName="enabled" class="checkboxes">
+    <label uiseek checkbox>
+      <input type="checkbox" formControlName="unchecked" />
+      <span>unchecked</span>
+    </label>
+    <label uiseek checkbox>
+      <input type="checkbox" formControlName="checked" />
+      <span>checked</span>
+    </label>
+    <label uiseek checkbox>
+      <input
+        type="checkbox"
+        formControlName="indeterminate"
+        [indeterminate]="true"
+      />
+      <span>indeterminate</span>
+    </label>
+  </div>
+  <div formGroupName="disabled" class="checkboxes">
+    <label uiseek checkbox>
+      <input type="checkbox" formControlName="unchecked" />
+      <span>unchecked</span>
+    </label>
+    <label uiseek checkbox>
+      <input type="checkbox" formControlName="checked" />
+      <span>checked</span>
+    </label>
+    <label uiseek checkbox>
+      <input
+        type="checkbox"
+        formControlName="indeterminate"
+        [indeterminate]="true"
+      />
+      <span>indeterminate</span>
+    </label>
+  </div>
+</form>

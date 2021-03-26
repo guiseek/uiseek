@@ -17,7 +17,7 @@
     "paths": {
       "@uiseek/styles": ["libs/styles/src/index.ts"],
       "@uiseek/ui-elements": ["libs/ui/elements/src/index.ts"],
-      "core": ["libs/uiseek/src/index.ts"]
+      "@uiseek/core": ["libs/uiseek/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

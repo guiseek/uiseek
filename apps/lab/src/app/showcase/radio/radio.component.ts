@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'uiseek-radio',
   templateUrl: './radio.component.html',
-  styleUrls: ['./radio.component.scss']
+  styleUrls: ['./radio.component.scss'],
 })
-export class RadioComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class RadioComponent {
+  form = this.fb.group({
+    enabled: ['true'],
+    disabled: [{ disabled: true, value: 'true' }],
+  });
+  constructor(readonly fb: FormBuilder) {}
 }
