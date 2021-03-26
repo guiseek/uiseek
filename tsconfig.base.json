@@ -15,9 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@uiseek/styles": ["dist/libs/ui/styles/src/index.js"],
-      "@uiseek/ui-elements": ["libs/ui/elements/src/index.ts"],
-      "@uiseek/styles": ["libs/styles/src/index.ts"]
+      "@uiseek/styles": ["libs/styles/src/index.ts"],
+      "@uiseek/ui-elements": ["libs/ui/elements/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
