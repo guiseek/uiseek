@@ -1,10 +1,10 @@
-export * from './lib/ui-styles';
+export * from './lib/styles';
 
 export function addLinkOnHead(
   source?: string,
   position: InsertPosition = 'beforeend'
 ) {
-  if (!source) source = '~@voxel/ui-styles/ui-styles.css';
+  if (!source) source = '~@voxel/styles/styles.css';
   const head: HTMLHeadElement = document.head;
   const link: HTMLLinkElement = document.createElement('link');
   link.setAttribute('src', source);
