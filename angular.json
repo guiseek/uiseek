@@ -160,6 +160,43 @@
           }
         }
       }
+    },
+    "uiseek": {
+      "projectType": "library",
+      "root": "libs/uiseek",
+      "sourceRoot": "libs/uiseek/src",
+      "prefix": "usk",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/uiseek/tsconfig.lib.json",
+            "project": "libs/uiseek/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/uiseek/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/uiseek/src/**/*.ts",
+              "libs/uiseek/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/uiseek"],
+          "options": {
+            "jestConfig": "libs/uiseek/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

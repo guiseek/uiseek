@@ -15,5 +15,9 @@
       "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
-  "projects": { "lab": { "tags": [] }, "styles": { "tags": [] } }
+  "projects": {
+    "lab": { "tags": [] },
+    "styles": { "tags": [] },
+    "uiseek": { "tags": [] }
+  }
 }
