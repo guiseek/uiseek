@@ -1,0 +1,4 @@
+{
+  "degradation": ["Edge displays ms type of dot animation"],
+  "issues": ["There is no support for determinate progress"]
+}

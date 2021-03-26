@@ -1,0 +1,29 @@
+.uiseek-link {
+  --uiseek-helper-theme: var(
+    --uiseek-theme-rgb,
+    var(--uiseek-primary-rgb, 33, 150, 243)
+  );
+  --uiseek-helper-safari1: rgba(var(--uiseek-helper-theme), 0.12);
+  border-radius: 4px;
+  color: rgb(var(--uiseek-helper-theme));
+  text-decoration: none;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+/* Hover */
+.uiseek-link:hover {
+  text-decoration: underline;
+}
+
+/* Focus */
+.uiseek-link:focus {
+  background-color: var(--uiseek-helper-safari1);
+  box-shadow: 0 0 0 0.16em var(--uiseek-helper-safari1);
+  outline: none;
+}
+
+/* Active */
+.uiseek-link:active {
+  background-color: transparent;
+  box-shadow: none;
+}

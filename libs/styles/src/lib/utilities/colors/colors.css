@@ -1,0 +1,46 @@
+/* Components */
+.uiseek-primary {
+  --uiseek-theme-rgb: var(--uiseek-primary-rgb, 33, 150, 243);
+  --uiseek-ontheme-rgb: var(--uiseek-onprimary-rgb, 255, 255, 255);
+}
+
+.uiseek-secondary {
+  --uiseek-theme-rgb: var(--uiseek-secondary-rgb, 102, 0, 238);
+  --uiseek-ontheme-rgb: var(--uiseek-onsecondary-rgb, 255, 255, 255);
+}
+
+.uiseek-error {
+  --uiseek-theme-rgb: var(--uiseek-error-rgb, 238, 0, 0);
+  --uiseek-ontheme-rgb: var(--uiseek-error-rgb, 255, 255, 255);
+}
+
+.uiseek-warning {
+  --uiseek-theme-rgb: var(--uiseek-warning-rgb, 238, 102, 0);
+  --uiseek-ontheme-rgb: var(--uiseek-onwarning-rgb, 255, 255, 255);
+}
+
+.uiseek-success {
+  --uiseek-theme-rgb: var(--uiseek-success-rgb, 17, 136, 34);
+  --uiseek-ontheme-rgb: var(--uiseek-onsuccess-rgb, 255, 255, 255);
+}
+
+/* Text */
+.uiseek-primary-text {
+  color: rgb(var(--uiseek-primary-rgb, 33, 150, 243));
+}
+
+.uiseek-secondary-text {
+  color: rgb(var(--uiseek-secondary-rgb, 102, 0, 238));
+}
+
+.uiseek-error-text {
+  color: rgb(var(--uiseek-error-rgb, 238, 0, 0));
+}
+
+.uiseek-warning-text {
+  color: rgb(var(--uiseek-warning-rgb, 238, 102, 0));
+}
+
+.uiseek-success-text {
+  color: rgb(var(--uiseek-success-rgb, 17, 136, 34));
+}
