@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OutlinedComponent } from './outlined.component';
+import { TextFieldOutlinedComponent } from './outlined.component';
 
-describe('OutlinedComponent', () => {
-  let component: OutlinedComponent;
-  let fixture: ComponentFixture<OutlinedComponent>;
+describe('TextFieldOutlinedComponent', () => {
+  let component: TextFieldOutlinedComponent;
+  let fixture: ComponentFixture<TextFieldOutlinedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OutlinedComponent ]
+      declarations: [ TextFieldOutlinedComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OutlinedComponent);
+    fixture = TestBed.createComponent(TextFieldOutlinedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

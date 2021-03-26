@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LinearComponent } from './linear.component';
+import { ProgressLinearComponent } from './linear.component';
 
-describe('LinearComponent', () => {
-  let component: LinearComponent;
-  let fixture: ComponentFixture<LinearComponent>;
+describe('ProgressLinearComponent', () => {
+  let component: ProgressLinearComponent;
+  let fixture: ComponentFixture<ProgressLinearComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LinearComponent],
+      declarations: [ProgressLinearComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LinearComponent);
+    fixture = TestBed.createComponent(ProgressLinearComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

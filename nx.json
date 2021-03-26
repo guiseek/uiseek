@@ -12,12 +12,23 @@
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
+      }
     }
   },
   "projects": {
     "lab": { "tags": [] },
     "styles": { "tags": [] },
-    "uiseek": { "tags": [] }
+    "uiseek": { "tags": [] },
+    "uiseek-e2e": { "tags": [], "implicitDependencies": ["uiseek"] },
+    "cases": { "tags": [] },
+    "cases-e2e": { "tags": [], "implicitDependencies": ["cases"] }
   }
 }

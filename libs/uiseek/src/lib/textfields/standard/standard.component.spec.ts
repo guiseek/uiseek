@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StandardComponent } from './standard.component';
+import { TextFieldStandardComponent } from './standard.component';
 
-describe('StandardComponent', () => {
-  let component: StandardComponent;
-  let fixture: ComponentFixture<StandardComponent>;
+describe('TextFieldStandardComponent', () => {
+  let component: TextFieldStandardComponent;
+  let fixture: ComponentFixture<TextFieldStandardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StandardComponent ]
+      declarations: [ TextFieldStandardComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StandardComponent);
+    fixture = TestBed.createComponent(TextFieldStandardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

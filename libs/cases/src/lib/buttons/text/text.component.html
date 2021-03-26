@@ -1,0 +1,6 @@
+<ng-container *ngIf="disabled; else enabled">
+  <button uiseek text disabled type="button">Text Button</button>
+</ng-container>
+<ng-template #enabled>
+  <button uiseek text type="button">Text Button</button>
+</ng-template>
