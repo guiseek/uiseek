@@ -355,6 +355,57 @@
           }
         }
       }
+    },
+    "signaling": {
+      "root": "apps/signaling",
+      "sourceRoot": "apps/signaling/src",
+      "projectType": "application",
+      "prefix": "signaling",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/signaling",
+            "main": "apps/signaling/src/main.ts",
+            "tsConfig": "apps/signaling/tsconfig.app.json",
+            "assets": ["apps/signaling/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/signaling/src/environments/environment.ts",
+                  "with": "apps/signaling/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "signaling:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/signaling/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/signaling"],
+          "options": {
+            "jestConfig": "apps/signaling/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

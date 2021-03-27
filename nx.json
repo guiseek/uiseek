@@ -29,6 +29,7 @@
     "uiseek": { "tags": [] },
     "uiseek-e2e": { "tags": [], "implicitDependencies": ["uiseek"] },
     "cases": { "tags": [] },
-    "cases-e2e": { "tags": [], "implicitDependencies": ["cases"] }
+    "cases-e2e": { "tags": [], "implicitDependencies": ["cases"] },
+    "signaling": { "tags": [] }
   }
 }
