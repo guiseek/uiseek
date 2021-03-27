@@ -1,3 +1,4 @@
+import { w3cwebsocket } from 'websocket';
 import { SignalingClient } from './signaling-client';
 import { ObjectType } from './types/object-type';
 import { error, timeout } from './utils';
@@ -20,7 +21,7 @@ export class SignalingChannel {
     ICE_CANDIDATE: 'ICE_CANDIDATE',
   };
 
-  constructor(public webSocketImplementation: WebSocket) {}
+  constructor(public webSocketImplementation: w3cwebsocket) {}
 
   onOffer(signalingServeUrl: string, peerId: string, offer: any) {
     const channel = `${signalingServeUrl}, ${peerId}, ${offer}`;

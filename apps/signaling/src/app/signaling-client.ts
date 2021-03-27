@@ -1,5 +1,6 @@
 import { HandshakeRequest, relayErrorReason } from './common';
 import { ObjectType, SignalingStateType } from './types';
+import { w3cwebsocket } from 'websocket';
 import { Message } from './common/message';
 
 export class SignalingClient {
@@ -15,7 +16,7 @@ export class SignalingClient {
   };
 
   constructor(
-    public webSocket: WebSocket,
+    public webSocket: w3cwebsocket,
     public url: string,
     public email: string,
     public secret: string
@@ -59,7 +60,7 @@ export class SignalingClient {
     if (this.webSocket) {
       this.webSocket.close();
     }
-    this.webSocket = new WebSocket(this.url, 'webrtc-signaling');
+    this.webSocket = new w3cwebsocket(this.url, 'webrtc-signaling');
 
     this.webSocket.onerror = (error) => {
       if (this.id) {

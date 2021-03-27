@@ -12,9 +12,13 @@ consoleStamp(console, {
   },
 });
 
+const host = '0.0.0.0';
 const port = +process.env.PORT || 8080;
-const signalingServer = new SignalingServer('0.0.0.0', port);
+
+const signalingServer = new SignalingServer(host, port);
 
 process.on('exit', () => {
+  console.log('exit');
+
   signalingServer.close();
 });

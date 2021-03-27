@@ -9,6 +9,9 @@ export class NavigationService {
 
   register(nav: Navigation | NavigationItem[]) {
     if (nav instanceof Navigation) {
+      if (this.navigations.has(nav.id)) {
+        throw new Error(`Navigation ${nav.id} in use`);
+      }
       this.navigations.set(nav.id, nav);
     } else {
       const navigation = new Navigation(NEXT_ID++, nav);

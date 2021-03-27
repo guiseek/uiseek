@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NavigationService } from './navigation.service';
-import { Navigation } from './navigation';
+import { Navigation, NavigationItem } from './navigation';
 
 @Component({
   selector: 'uiseek-navigation',
@@ -12,5 +12,9 @@ export class NavigationComponent {
   readonly nav: Navigation;
   constructor(readonly navigation: NavigationService) {
     this.nav = this.navigation.get('nav');
+  }
+
+  toggle(item: NavigationItem) {
+    item.expanded = !item.expanded
   }
 }
