@@ -1,0 +1,13 @@
+<ul>
+  <ng-container *ngIf="nav.items$ | async as list">
+    <li *ngFor="let item of list" [class]="{ dropdown: item.children?.length }">
+      <a [routerLink]="item.route">{{ item.label }}</a>
+
+      <ul class="dropdown__menu" [id]="item.id">
+        <li *ngFor="let child of item.children">
+          <a [routerLink]="child.route">{{ child.label }}</a>
+        </li>
+      </ul>
+    </li>
+  </ng-container>
+</ul>

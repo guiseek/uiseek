@@ -5,5 +5,6 @@ module.exports = {
     '<rootDir>/libs/uiseek',
     '<rootDir>/libs/cases',
     '<rootDir>/apps/signaling',
+    '<rootDir>/apps/messages',
   ],
 };

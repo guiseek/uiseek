@@ -3,7 +3,7 @@
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
-  "defaultProject": "lab",
+  "defaultProject": "messages",
   "schematics": {
     "@nrwl/angular": {
       "application": {
@@ -403,6 +403,121 @@
           "options": {
             "jestConfig": "apps/signaling/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "messages": {
+      "projectType": "application",
+      "root": "apps/messages",
+      "sourceRoot": "apps/messages/src",
+      "prefix": "uiseek",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/messages",
+            "index": "apps/messages/src/index.html",
+            "main": "apps/messages/src/main.ts",
+            "polyfills": "apps/messages/src/polyfills.ts",
+            "tsConfig": "apps/messages/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/messages/src/favicon.ico",
+              "apps/messages/src/assets"
+            ],
+            "styles": ["apps/messages/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/messages/src/environments/environment.ts",
+                  "with": "apps/messages/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "messages:build",
+            "proxyConfig": "apps/messages/proxy.conf.json"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "messages:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "messages:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/messages/src/**/*.ts",
+              "apps/messages/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/messages"],
+          "options": {
+            "jestConfig": "apps/messages/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "messages-e2e": {
+      "root": "apps/messages-e2e",
+      "sourceRoot": "apps/messages-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/messages-e2e/cypress.json",
+            "tsConfig": "apps/messages-e2e/tsconfig.e2e.json",
+            "devServerTarget": "messages:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "messages:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/messages-e2e/**/*.{js,ts}"]
           }
         }
       }
