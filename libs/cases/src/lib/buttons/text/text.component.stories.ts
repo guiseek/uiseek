@@ -2,19 +2,23 @@ import { text, select, number, boolean } from '@storybook/addon-knobs';
 import { ButtonTextComponent } from './text.component';
 
 export default {
-  title: 'ButtonTextComponent'
-}
+  title: 'ButtonTextComponent',
+};
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: []
+    imports: [],
   },
   component: ButtonTextComponent,
   props: {
     state: text('text', 'Tooltip'),
-    disabled: select('disabled', {
-      'Desabilitado': true,
-      'Habilitado': false
-    }, false)
-  }
-})
+    disabled: select(
+      'disabled',
+      {
+        Desabilitado: true,
+        Habilitado: false,
+      },
+      false
+    ),
+  },
+});

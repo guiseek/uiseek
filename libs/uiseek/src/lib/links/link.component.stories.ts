@@ -1,15 +1,13 @@
-
 import { LinkComponent } from './link.component';
 
 export default {
-  title: 'LinkComponent'
-}
+  title: 'LinkComponent',
+};
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: []
+    imports: [],
   },
   component: LinkComponent,
-  props: {
-  }
-})
+  props: {},
+});

@@ -1,15 +1,13 @@
-
 import { ButtonTextComponent } from './text.component';
 
 export default {
-  title: 'ButtonTextComponent'
-}
+  title: 'ButtonTextComponent',
+};
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: []
+    imports: [],
   },
   component: ButtonTextComponent,
-  props: {
-  }
-})
+  props: {},
+});

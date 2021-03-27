@@ -1,15 +1,13 @@
-
 import { ProgressLinearComponent } from './linear.component';
 
 export default {
-  title: 'ProgressLinearComponent'
-}
+  title: 'ProgressLinearComponent',
+};
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: []
+    imports: [],
   },
   component: ProgressLinearComponent,
-  props: {
-  }
-})
+  props: {},
+});

@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'uiseek-showcase',
   templateUrl: './showcase.component.html',
-  styleUrls: ['./showcase.component.scss']
+  styleUrls: ['./showcase.component.scss'],
 })
 export class ShowcaseComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -10,7 +10,13 @@ import { NgModule } from '@angular/core';
         loadChildren: () =>
           import('./showcase/showcase.module').then((m) => m.ShowcaseModule),
       },
-      { path: 'playground', loadChildren: () => import('./playground/playground.module').then(m => m.PlaygroundModule) },
+      {
+        path: 'playground',
+        loadChildren: () =>
+          import('./playground/playground.module').then(
+            (m) => m.PlaygroundModule
+          ),
+      },
     ]),
   ],
   exports: [RouterModule],

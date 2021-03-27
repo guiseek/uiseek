@@ -6,5 +6,5 @@ import { Component, HostBinding } from '@angular/core';
 })
 export class SwitchComponent {
   @HostBinding('class.uiseek-switch')
-  uiseekCheckbox = true
+  uiseekCheckbox = true;
 }

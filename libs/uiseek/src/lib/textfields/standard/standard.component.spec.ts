@@ -8,9 +8,8 @@ describe('TextFieldStandardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TextFieldStandardComponent ]
-    })
-    .compileComponents();
+      declarations: [TextFieldStandardComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

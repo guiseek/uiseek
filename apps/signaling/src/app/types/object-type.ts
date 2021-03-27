@@ -1,1 +1,1 @@
-export type ObjectType = 'OFFER' | 'ANSWER' | 'ICE_CANDIDATE'
+export type ObjectType = 'OFFER' | 'ANSWER' | 'ICE_CANDIDATE';

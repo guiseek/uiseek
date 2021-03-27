@@ -7,7 +7,7 @@ import { ButtonBase } from '../button-base';
   styleUrls: ['./text.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ButtonTextComponent  {
+export class ButtonTextComponent {
   @Input() state: 'enabled' | 'disabled' = 'enabled';
   @Input() disabled: boolean = false;
 }

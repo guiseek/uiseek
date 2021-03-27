@@ -33,7 +33,7 @@ export class CheckboxMixed {
     this.domNode.addEventListener('blur', this.handleBlur.bind(this));
 
     this.updateCheckboxMixed();
-  };
+  }
 
   updateCheckboxMixed() {
     var count = 0;
@@ -46,7 +46,7 @@ export class CheckboxMixed {
 
     if (count === 0) {
       // this.domNode.setAttribute('aria-checked', 'false');
-      this.domNode.setAttribute('indeterminate', 'true')
+      this.domNode.setAttribute('indeterminate', 'true');
     } else {
       if (count === this.controlledCheckboxes.length) {
         // this.domNode.setAttribute('aria-checked', 'true');

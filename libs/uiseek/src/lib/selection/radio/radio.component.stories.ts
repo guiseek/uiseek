@@ -1,15 +1,13 @@
-
 import { RadioComponent } from './radio.component';
 
 export default {
-  title: 'RadioComponent'
-}
+  title: 'RadioComponent',
+};
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: []
+    imports: [],
   },
   component: RadioComponent,
-  props: {
-  }
-})
+  props: {},
+});

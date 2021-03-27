@@ -6,5 +6,5 @@ import { Component, HostBinding } from '@angular/core';
 })
 export class RadioComponent {
   @HostBinding('class.uiseek-radio')
-  uiseekCheckbox = true
+  uiseekCheckbox = true;
 }

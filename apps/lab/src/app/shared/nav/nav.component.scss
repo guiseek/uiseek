@@ -118,7 +118,7 @@
     &:after {
       content: '';
       border: 0.5rem solid transparent;
-      border-bottom-color: rgb(var(--uiseek-helper-ontheme, 255, 255, 255));;
+      border-bottom-color: rgb(var(--uiseek-helper-ontheme, 255, 255, 255));
       position: absolute;
       top: calc(100% - 1.25rem);
       left: 50%;

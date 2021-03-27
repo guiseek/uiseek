@@ -5,6 +5,6 @@ import { ButtonBase } from '../button-base';
   selector: 'uiseek-outlined',
   templateUrl: './outlined.component.html',
   styleUrls: ['./outlined.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonOutlinedComponent extends ButtonBase {}

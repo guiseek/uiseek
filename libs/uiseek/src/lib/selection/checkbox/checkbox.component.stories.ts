@@ -1,15 +1,13 @@
-
 import { CheckboxComponent } from './checkbox.component';
 
 export default {
-  title: 'CheckboxComponent'
-}
+  title: 'CheckboxComponent',
+};
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: []
+    imports: [],
   },
   component: CheckboxComponent,
-  props: {
-  }
-})
+  props: {},
+});

@@ -6,5 +6,5 @@ import { Component, HostBinding } from '@angular/core';
 })
 export class CheckboxComponent {
   @HostBinding('class.uiseek-checkbox')
-  uiseekCheckbox = true
+  uiseekCheckbox = true;
 }

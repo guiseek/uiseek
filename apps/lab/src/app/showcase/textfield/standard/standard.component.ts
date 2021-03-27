@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'uiseek-standard',
   templateUrl: './standard.component.html',
-  styleUrls: ['./standard.component.scss']
+  styleUrls: ['./standard.component.scss'],
 })
 export class StandardComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

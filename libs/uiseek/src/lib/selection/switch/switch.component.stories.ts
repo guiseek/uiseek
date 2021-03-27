@@ -1,15 +1,13 @@
-
 import { SwitchComponent } from './switch.component';
 
 export default {
-  title: 'SwitchComponent'
-}
+  title: 'SwitchComponent',
+};
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: []
+    imports: [],
   },
   component: SwitchComponent,
-  props: {
-  }
-})
+  props: {},
+});

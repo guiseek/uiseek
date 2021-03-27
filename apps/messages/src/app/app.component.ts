@@ -20,7 +20,11 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     window.setTimeout(() => {
-      this.nav.addItem({ route: '/', label: 'Home', children: [ { route: '/', label: 'Home' } ] });
+      this.nav.addItem({
+        route: '/',
+        label: 'Home',
+        children: [{ route: '/', label: 'Home' }],
+      });
     }, 4000);
   }
 }

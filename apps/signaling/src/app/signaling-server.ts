@@ -7,8 +7,6 @@ import { Message } from './common/message';
 import { toText } from './utils';
 import sha256 from 'tiny-sha256';
 
-
-
 export class SignalingServer {
   httpServer: Server;
 

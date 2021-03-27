@@ -1,15 +1,13 @@
-
 import { ProgressCircularComponent } from './circular.component';
 
 export default {
-  title: 'ProgressCircularComponent'
-}
+  title: 'ProgressCircularComponent',
+};
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: []
+    imports: [],
   },
   component: ProgressCircularComponent,
-  props: {
-  }
-})
+  props: {},
+});

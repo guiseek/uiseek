@@ -1,15 +1,13 @@
-
 import { TextFieldOutlinedComponent } from './outlined.component';
 
 export default {
-  title: 'TextFieldOutlinedComponent'
-}
+  title: 'TextFieldOutlinedComponent',
+};
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: []
+    imports: [],
   },
   component: TextFieldOutlinedComponent,
-  props: {
-  }
-})
+  props: {},
+});

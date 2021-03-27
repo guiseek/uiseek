@@ -15,6 +15,6 @@ export class NavigationComponent {
   }
 
   toggle(item: NavigationItem) {
-    item.expanded = !item.expanded
+    item.expanded = !item.expanded;
   }
 }

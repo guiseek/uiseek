@@ -8,9 +8,8 @@ describe('OutlinedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OutlinedComponent ]
-    })
-    .compileComponents();
+      declarations: [OutlinedComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

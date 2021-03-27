@@ -1,15 +1,13 @@
-
 import { ButtonContainedComponent } from './contained.component';
 
 export default {
-  title: 'ButtonContainedComponent'
-}
+  title: 'ButtonContainedComponent',
+};
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: []
+    imports: [],
   },
   component: ButtonContainedComponent,
-  props: {
-  }
-})
+  props: {},
+});

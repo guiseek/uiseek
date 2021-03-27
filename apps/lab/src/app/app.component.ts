@@ -17,7 +17,5 @@ export class AppComponent implements AfterViewInit {
     this.el = elRef.nativeElement;
   }
 
-  ngAfterViewInit(): void {
-
-  }
+  ngAfterViewInit(): void {}
 }

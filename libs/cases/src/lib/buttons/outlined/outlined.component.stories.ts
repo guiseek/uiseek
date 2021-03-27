@@ -1,15 +1,13 @@
-
 import { ButtonOutlinedComponent } from './outlined.component';
 
 export default {
-  title: 'ButtonOutlinedComponent'
-}
+  title: 'ButtonOutlinedComponent',
+};
 
 export const primary = () => ({
   moduleMetadata: {
-    imports: []
+    imports: [],
   },
   component: ButtonOutlinedComponent,
-  props: {
-  }
-})
+  props: {},
+});
