@@ -1,20 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContainedComponent } from './contained.component';
+import { ButtonContainedComponent } from './contained.component';
 
-describe('ContainedComponent', () => {
-  let component: ContainedComponent;
-  let fixture: ComponentFixture<ContainedComponent>;
+describe('ButtonContainedComponent', () => {
+  let component: ButtonContainedComponent;
+  let fixture: ComponentFixture<ButtonContainedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContainedComponent ]
-    })
-    .compileComponents();
+      declarations: [ButtonContainedComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContainedComponent);
+    fixture = TestBed.createComponent(ButtonContainedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

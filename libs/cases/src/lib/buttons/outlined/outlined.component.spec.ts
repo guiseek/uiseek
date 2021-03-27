@@ -1,20 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OutlinedComponent } from './outlined.component';
+import { ButtonOutlinedComponent } from './outlined.component';
 
-describe('OutlinedComponent', () => {
-  let component: OutlinedComponent;
-  let fixture: ComponentFixture<OutlinedComponent>;
+describe('ButtonOutlinedComponent', () => {
+  let component: ButtonOutlinedComponent;
+  let fixture: ComponentFixture<ButtonOutlinedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OutlinedComponent ]
-    })
-    .compileComponents();
+      declarations: [ButtonOutlinedComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OutlinedComponent);
+    fixture = TestBed.createComponent(ButtonOutlinedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

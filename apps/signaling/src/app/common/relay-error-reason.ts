@@ -1,0 +1,4 @@
+export const relayErrorReason = {
+  TARGET_NOT_FOUND: 'TARGET_NOT_FOUND',
+  MESSAGE_INVALID: 'MESSAGE_INVALID',
+};
