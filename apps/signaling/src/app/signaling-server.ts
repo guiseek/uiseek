@@ -1,11 +1,13 @@
-import { HandshakeResponse } from './common/handshake-response';
-import { relayErrorReason } from './common/relay-error-reason';
 import { server as WebSocketServer } from 'websocket';
-import { RelayError } from './common/relay-error';
 import { createServer, Server } from 'http';
-import { Message } from './common/message';
-import { toText } from './utils';
 import sha256 from 'tiny-sha256';
+import {
+  HandshakeResponse,
+  relayErrorReason,
+  RelayError,
+  Message,
+  toText,
+} from '@uiseek/webrtc';
 
 export class SignalingServer {
   httpServer: Server;
@@ -29,7 +31,7 @@ export class SignalingServer {
 
     webSocketServer.on('request', (request) => {
       const remote = `${request.socket.remoteAddress}:${request.socket.remotePort}`;
-      console.log(`signaling server connection request from ${remote}`);
+      console.log(`connection request from ${remote}`);
 
       const connection = request.accept('webrtc-signaling', request.origin);
 
@@ -50,13 +52,13 @@ export class SignalingServer {
               const identity = `${id} ${messageObject.email}`;
 
               console.log(
-                `signaling server handshake success: ${identity} ${remote}`
+                `handshake success: ${identity} ${remote}`
               );
 
               connection.sendUTF(JSON.stringify(new HandshakeResponse(id)));
             } else {
               const remote = `${connection.socket.remoteAddress}:${connection.socket.remotePort}`;
-              console.log(`signaling server handshake failed: ${remote}`);
+              console.log(`handshake failed: ${remote}`);
 
               const response = new HandshakeResponse(
                 null,
@@ -105,7 +107,7 @@ export class SignalingServer {
                 ];
 
                 console.log(
-                  'signaling server relayed message ' + message.join(' ')
+                  'relayed message ' + message.join(' ')
                 );
 
                 targetConnection.sendUTF(messageJson);
@@ -138,23 +140,23 @@ export class SignalingServer {
         const remote = `${connection.socket.remoteAddress}:${connection.socket.remotePort}`;
         if (this.connectionIdMap.has(connection)) {
           const id = this.connectionIdMap.get(connection);
-          console.log(`signaling server disconnected: ${id} ${remote}`);
+          console.log(`disconnected: ${id} ${remote}`);
           this.connectionIdMap.delete(connection);
           this.idConnectionMap.delete(id);
         } else {
-          console.log(`signaling server disconnection. ${remote}`);
+          console.log(`disconnection. ${remote}`);
         }
       });
     });
 
-    console.log(`signaling server listening on ws://${host}:${port}`);
+    console.log(`on ws://${host}:${port}`);
   }
 
   close() {
-    console.log('signaling server closing ...');
+    console.log('closing ...');
     this.idConnectionMap.forEach((connection, id) => {
       const remote = `${connection.socket.remoteAddress}:${connection.socket.remotePort}`;
-      console.log(`signaling server disconnecting: ${id} ${remote}`);
+      console.log(`disconnecting: ${id} ${remote}`);
       connection.close();
     });
     this.httpServer.close();

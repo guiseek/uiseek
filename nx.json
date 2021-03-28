@@ -32,6 +32,7 @@
     "cases-e2e": { "tags": [], "implicitDependencies": ["cases"] },
     "signaling": { "tags": [] },
     "messages": { "tags": [] },
-    "messages-e2e": { "tags": [], "implicitDependencies": ["messages"] }
+    "messages-e2e": { "tags": [], "implicitDependencies": ["messages"] },
+    "webrtc": { "tags": [] }
   }
 }

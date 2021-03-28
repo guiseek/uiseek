@@ -18,7 +18,8 @@
       "@uiseek/styles": ["libs/styles/src/index.ts"],
       "@uiseek/ui-elements": ["libs/ui/elements/src/index.ts"],
       "@uiseek/core": ["libs/uiseek/src/index.ts"],
-      "@uiseek/cases": ["libs/cases/src/index.ts"]
+      "@uiseek/cases": ["libs/cases/src/index.ts"],
+      "@uiseek/webrtc": ["libs/webrtc/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

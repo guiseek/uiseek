@@ -421,6 +421,7 @@
             "main": "apps/messages/src/main.ts",
             "polyfills": "apps/messages/src/polyfills.ts",
             "tsConfig": "apps/messages/tsconfig.app.json",
+            "allowedCommonJsDependencies": ["websocket"],
             "aot": true,
             "assets": [
               "apps/messages/src/favicon.ico",
@@ -518,6 +519,27 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/messages-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "webrtc": {
+      "root": "libs/webrtc",
+      "sourceRoot": "libs/webrtc/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/webrtc/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/webrtc"],
+          "options": {
+            "jestConfig": "libs/webrtc/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

@@ -6,5 +6,6 @@ module.exports = {
     '<rootDir>/libs/cases',
     '<rootDir>/apps/signaling',
     '<rootDir>/apps/messages',
+    '<rootDir>/libs/webrtc',
   ],
 };
