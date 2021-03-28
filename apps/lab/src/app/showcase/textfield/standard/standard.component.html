@@ -1,37 +1,41 @@
-<a>textfield - standard</a>
-<div class="textfields">
-  <label uiseek textfield standard>
-    <input placeholder=" " />
-    <span>blank</span>
-  </label>
-  <label uiseek textfield standard>
-    <input placeholder=" " value="Lorem ipsum" />
-    <span>non-blank</span>
-  </label>
-  <label uiseek textfield standard>
-    <textarea placeholder=" "></textarea>
-    <span>blank textarea</span>
-  </label>
-  <label uiseek textfield standard>
-    <textarea placeholder=" ">Lorem ipsum</textarea>
-    <span>non-blank textarea</span>
-  </label>
-</div>
-<div class="textfields">
-  <label uiseek textfield standard>
-    <input placeholder=" " disabled />
-    <span>blank</span>
-  </label>
-  <label uiseek textfield standard>
-    <input placeholder=" " value="Lorem ipsum" disabled />
-    <span>non-blank</span>
-  </label>
-  <label uiseek textfield standard>
-    <textarea placeholder=" " disabled></textarea>
-    <span>blank textarea</span>
-  </label>
-  <label uiseek textfield standard>
-    <textarea placeholder=" " disabled>Lorem ipsum</textarea>
-    <span>non-blank textarea</span>
-  </label>
-</div>
+<form [formGroup]="form" class="grid">
+  <a>textfield - standard</a>
+  <div class="textfields">
+    <label uiseek textfield standard>
+      <span>blank</span>
+      <input uiseek type="text" formControlName="blank" />
+      <output>Error message</output>
+      <small>Helper text</small>
+    </label>
+    <label uiseek textfield standard>
+      <span>non-blank</span>
+      <input placeholder=" " value="Lorem ipsum" />
+    </label>
+    <label uiseek textfield standard>
+      <span>blank textarea</span>
+      <textarea placeholder=" "></textarea>
+    </label>
+    <label uiseek textfield standard>
+      <span>non-blank textarea</span>
+      <textarea placeholder=" ">Lorem ipsum</textarea>
+    </label>
+  </div>
+  <div class="textfields">
+    <label uiseek textfield standard>
+      <span>blank</span>
+      <input placeholder=" " disabled />
+    </label>
+    <label uiseek textfield standard>
+      <span>non-blank</span>
+      <input placeholder=" " value="Lorem ipsum" disabled />
+    </label>
+    <label uiseek textfield standard>
+      <span>blank textarea</span>
+      <textarea placeholder=" " disabled></textarea>
+    </label>
+    <label uiseek textfield standard>
+      <span>non-blank textarea</span>
+      <textarea placeholder=" " disabled>Lorem ipsum</textarea>
+    </label>
+  </div>
+</form>
