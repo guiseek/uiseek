@@ -13,6 +13,7 @@
     system-ui,
     -apple-system
   );
+  max-height: 56px;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -72,6 +73,33 @@
   transform-origin: bottom center;
   transform: scaleX(0);
   transition: transform 0.2s;
+}
+
+.uiseek-textfield-standard > input + span + div > small,
+.uiseek-textfield-standard > input + span + div > output {
+  font-size: smaller;
+  position: absolute;
+}
+// Helper text
+.uiseek-textfield-standard > input + span + div > small {
+  color: rgba(var(--uiseek-onsurface-rgb, 0, 0, 0), 0.6);
+  transition: opacity 200ms ease-out 200ms;
+  opacity: 1;
+}
+
+.uiseek-textfield-standard > input.ng-invalid.ng-touched + span + div > small {
+  opacity: 0;
+}
+
+// Error message
+.uiseek-textfield-standard > input + span + div > output {
+  color: rgba(var(--uiseek-error-rgb, 0, 0, 0), 1);
+  transition: opacity 200ms ease-in 200ms;
+  opacity: 0;
+}
+
+.uiseek-textfield-standard > input.ng-invalid.ng-touched + span + div > output {
+  opacity: 1;
 }
 
 /* Hover */

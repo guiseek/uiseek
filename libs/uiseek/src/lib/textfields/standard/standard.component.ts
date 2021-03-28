@@ -1,10 +1,11 @@
 import { Component, HostBinding } from '@angular/core';
+import { TextFieldBase } from '../textfield-base';
 
 @Component({
   selector: 'label[uiseek][textfield][standard]',
-  template: '<ng-content select="input,textarea,span"></ng-content>',
+  templateUrl: './standard.component.html',
 })
-export class TextFieldStandardComponent {
+export class TextFieldStandardComponent extends TextFieldBase {
   @HostBinding('class.uiseek-textfield-standard')
   uiSeektextFieldStandard = true;
 }

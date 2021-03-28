@@ -1,4 +1,5 @@
 import { ProgressCircularComponent, ProgressLinearComponent } from './progress';
+import { InputComponent, OutputComponent } from './textfields/common';
 import { CommonModule } from '@angular/common';
 import { TooltipComponent } from './tooltip';
 import { NgModule } from '@angular/core';
@@ -18,6 +19,7 @@ import {
   TextFieldOutlinedComponent,
   TextFieldStandardComponent,
 } from './textfields';
+import { HelperComponent } from './textfields/common/helper/helper.component';
 
 @NgModule({
   imports: [CommonModule],
@@ -40,6 +42,9 @@ import {
     TextFieldFilledComponent,
     TextFieldOutlinedComponent,
     TextFieldStandardComponent,
+    InputComponent,
+    OutputComponent,
+    HelperComponent,
   ],
   exports: [
     ButtonContainedComponent,
@@ -60,6 +65,9 @@ import {
     TextFieldFilledComponent,
     TextFieldOutlinedComponent,
     TextFieldStandardComponent,
+    InputComponent,
+    OutputComponent,
+    HelperComponent,
   ],
 })
 export class UiSeekModule {}

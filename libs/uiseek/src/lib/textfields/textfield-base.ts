@@ -1,9 +1,8 @@
-import { ChangeDetectorRef, Directive } from '@angular/core';
-import { NgControl } from '@angular/forms';
+import { Directive, ChangeDetectorRef } from '@angular/core';
 
 @Directive()
 export class TextFieldBase {
-  constructor(cdr: ChangeDetectorRef, readonly ngControl: NgControl) {
+  constructor(cdr: ChangeDetectorRef) {
     cdr.detach();
   }
 }

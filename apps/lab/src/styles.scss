@@ -4,17 +4,20 @@
 
 :root {
   --uiseek-font-family: 'Montserrat', sans-serif;
+
   body.light {
     --uiseek-primary-rgb: 33, 89, 243;
     --uiseek-surface-rgb: 255, 255, 255;
     --uiseek-onsurface-rgb: 0, 0, 0;
     --uiseek-onprimary-rgb: 255, 255, 255;
+    --uiseek-error-rgb: 176, 0, 32;
   }
   body.dark {
     --uiseek-primary-rgb: 33, 89, 243;
     --uiseek-surface-rgb: 0, 0, 0;
     --uiseek-onsurface-rgb: 255, 255, 255;
     --uiseek-onprimary-rgb: 0, 0, 0;
+    --uiseek-error-rgb: 176, 0, 32;
   }
 }
 
