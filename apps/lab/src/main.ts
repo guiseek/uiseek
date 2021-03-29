@@ -1,3 +1,4 @@
+import { WebrIconElement } from '@webr/icon';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -10,4 +11,8 @@ if (environment.production) {
 
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
+  .then(() => {
+    customElements.define('webr-icon', WebrIconElement)
+  })
   .catch((err) => console.error(err));
+
