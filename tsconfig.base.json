@@ -18,12 +18,13 @@
       "@uiseek/styles": ["libs/styles/src/index.ts"],
       "@uiseek/ui-elements": ["libs/ui/elements/src/index.ts"],
       "@uiseek/webr": ["libs/uiseek/src/index.ts"],
-      "@uiseek/webr/*": ["libs/uiseek/*","!libs/uiseek/.storybook"],
+      "@uiseek/webr/*": ["libs/uiseek/*", "!libs/uiseek/.storybook"],
       "@uiseek/cases": ["libs/cases/src/index.ts"],
       "@uiseek/webrtc": ["libs/webrtc/src/index.ts"],
       "@webr/icon": ["libs/webr/icon/src/index.ts"],
       "@webr/dialog": ["libs/webr/dialog/src/index.ts"],
-      "@webr/core": ["libs/webr/core/src/index.ts"]
+      "@webr/core": ["libs/webr/core/src/index.ts"],
+      "@uiseek/state": ["libs/state/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

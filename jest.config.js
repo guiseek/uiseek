@@ -9,5 +9,6 @@ module.exports = {
     '<rootDir>/libs/webrtc',
     '<rootDir>/libs/webr/icon',
     '<rootDir>/libs/webr/core',
+    '<rootDir>/libs/state',
   ],
 };

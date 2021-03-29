@@ -35,6 +35,7 @@
     "messages-e2e": { "tags": [], "implicitDependencies": ["messages"] },
     "webrtc": { "tags": [] },
     "webr-icon": { "tags": ["scope:webr"] },
-    "webr-core": { "tags": [] }
+    "webr-core": { "tags": [] },
+    "state": { "tags": [] }
   }
 }
