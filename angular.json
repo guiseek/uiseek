@@ -543,6 +543,48 @@
           }
         }
       }
+    },
+    "webr-icon": {
+      "root": "libs/webr/icon",
+      "sourceRoot": "libs/webr/icon/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/webr/icon/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/webr/icon"],
+          "options": {
+            "jestConfig": "libs/webr/icon/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "webr-core": {
+      "root": "libs/webr/core",
+      "sourceRoot": "libs/webr/core/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/webr/core/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/webr/core"],
+          "options": {
+            "jestConfig": "libs/webr/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

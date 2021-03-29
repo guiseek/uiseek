@@ -33,6 +33,8 @@
     "signaling": { "tags": [] },
     "messages": { "tags": [] },
     "messages-e2e": { "tags": [], "implicitDependencies": ["messages"] },
-    "webrtc": { "tags": [] }
+    "webrtc": { "tags": [] },
+    "webr-icon": { "tags": ["scope:webr"] },
+    "webr-core": { "tags": [] }
   }
 }
