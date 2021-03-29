@@ -13,7 +13,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { FilledComponent } from './textfield/filled/filled.component';
 import { OutlinedComponent } from './textfield/outlined/outlined.component';
 import { StandardComponent } from './textfield/standard/standard.component';
-import { UiSeekModule } from '@uiseek/core';
+import { UiSeekCoreModule } from '@uiseek/webr';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { UiSeekModule } from '@uiseek/core';
   ],
   imports: [
     CommonModule,
-    UiSeekModule,
+    UiSeekCoreModule,
     ReactiveFormsModule,
     ShowcaseRoutingModule,
   ],
