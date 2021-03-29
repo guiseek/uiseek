@@ -13,6 +13,10 @@ import { ProgressComponent } from './progress/progress.component';
 import { FilledComponent } from './textfield/filled/filled.component';
 import { OutlinedComponent } from './textfield/outlined/outlined.component';
 import { StandardComponent } from './textfield/standard/standard.component';
+import { UiSeekSelectionModule } from '@uiseek/webr/selection';
+import { UiSeekProgressModule } from '@uiseek/webr/progress';
+import { UiSeekTextFieldModule } from '@uiseek/webr/textfield';
+import { UiSeekButtonModule } from '@uiseek/webr/button';
 import { UiSeekCoreModule } from '@uiseek/webr';
 
 @NgModule({
@@ -31,6 +35,10 @@ import { UiSeekCoreModule } from '@uiseek/webr';
   imports: [
     CommonModule,
     UiSeekCoreModule,
+    UiSeekButtonModule,
+    UiSeekProgressModule,
+    UiSeekTextFieldModule,
+    UiSeekSelectionModule,
     ReactiveFormsModule,
     ShowcaseRoutingModule,
   ],
