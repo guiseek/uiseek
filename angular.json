@@ -585,6 +585,27 @@
           }
         }
       }
+    },
+    "state": {
+      "root": "libs/state",
+      "sourceRoot": "libs/state/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/state/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/state"],
+          "options": {
+            "jestConfig": "libs/state/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
