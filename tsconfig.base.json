@@ -17,7 +17,8 @@
     "paths": {
       "@uiseek/styles": ["libs/styles/src/index.ts"],
       "@uiseek/ui-elements": ["libs/ui/elements/src/index.ts"],
-      "@uiseek/core": ["libs/uiseek/src/index.ts"],
+      "@uiseek/webr": ["libs/uiseek/src/index.ts"],
+      "@uiseek/webr/*": ["libs/uiseek/*","!libs/uiseek/.storybook"],
       "@uiseek/cases": ["libs/cases/src/index.ts"],
       "@uiseek/webrtc": ["libs/webrtc/src/index.ts"],
       "@webr/icon": ["libs/webr/icon/src/index.ts"],
