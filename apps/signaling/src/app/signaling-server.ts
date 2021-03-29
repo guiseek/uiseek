@@ -51,9 +51,7 @@ export class SignalingServer {
               const remote = `${connection.socket.remoteAddress}':'${connection.socket.remotePort}`;
               const identity = `${id} ${messageObject.email}`;
 
-              console.log(
-                `handshake success: ${identity} ${remote}`
-              );
+              console.log(`handshake success: ${identity} ${remote}`);
 
               connection.sendUTF(JSON.stringify(new HandshakeResponse(id)));
             } else {
@@ -96,19 +94,10 @@ export class SignalingServer {
 
                 const source = `${connection.socket.remoteAddress}:${connection.socket.remotePort}`;
                 const target = `${targetConnection.socket.remoteAddress}:${targetConnection.socket.remotePort}`;
-                const message = [
-                  content,
-                  'from',
-                  sourceId,
-                  source,
-                  'to',
-                  targetId,
-                  target,
-                ];
 
-                console.log(
-                  'relayed message ' + message.join(' ')
-                );
+                const message = `${content} from ${sourceId} ${source} to ${targetId} ${target}`;
+
+                console.log('relayed message ' + message);
 
                 targetConnection.sendUTF(messageJson);
               } else {
